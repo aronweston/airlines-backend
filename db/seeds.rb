@@ -16,3 +16,23 @@ flight5 = Flight.create :date => '21/10/2020', :flight_number => 'AA494', :depar
 flight6 = Flight.create :date => '10/10/2020', :flight_number => 'AA101', :departure => 'Sydney', :arrival => 'Darwin', :plane => ' Embraer 175', :max_seats => "76"
 
 puts "#{Flight.count} flights."
+
+Booking.destroy_all
+booking1 = Booking.create :customer_name => 'John', :seat => 'A3', :flight_id => 1
+booking2 = Booking.create :customer_name => 'Scott', :seat => 'D6', :flight_id => 1
+booking3 = Booking.create :customer_name => 'Zoha', :seat => 'B5', :flight_id => 1
+booking4 = Booking.create :customer_name => 'Joel', :seat => 'A10', :flight_id => 1
+booking5 = Booking.create :customer_name => 'Mr Pickles', :seat => 'A11', :flight_id => 1
+
+puts "#{Booking.count} bookings."
+
+
+##Associations
+puts "Flights have many bookings"
+flight1.bookings << booking1
+flight1.bookings << booking2
+flight1.bookings << booking3
+flight1.bookings << booking4
+flight1.bookings << booking5
+
+

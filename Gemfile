@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 ###ADD GEMS HERE
 gem 'bcrypt', '~> 3.1.7'
 gem 'rack-cors'
+gem 'ngrok'
 
 
 # Use ActiveStorage variant
